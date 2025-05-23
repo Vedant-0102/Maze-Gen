@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f4f4f9;
+  color: #111;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+#mazeCanvas canvas {
+  display: block;
+  background-color: #ffffff; 
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: min(90vw, 500px);
+  height: min(90vw, 500px);
+}
+
+.controls {
+  margin-top: 1rem;
+}
+
+button {
+  margin: 0 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background: #3f51b5;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #303f9f;
+}
+
+.status {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background: #999;
+  border-radius: 50%;
+}
+
+.status-dot.generating {
+  background: #28a745;
+  animation: pulse 1.5s infinite;
+}
+
+.status-dot.complete {
+  background: #007bff;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.4); }
+}

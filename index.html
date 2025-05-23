@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maze Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Maze Generator</h1>
+  <div id="mazeCanvas"></div>
+
+  <div class="controls">
+    <button onclick="startGeneration()">Generate</button>
+    <button onclick="resetMaze()">Reset</button>
+  </div>
+
+  <div class="status">
+    <div class="status-dot" id="status-dot"></div>
+    <span id="status-text">Ready to generate</span>
+  </div>
+
+  <!-- Load p5.js properly -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
